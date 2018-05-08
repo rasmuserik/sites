@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments for Rasmus Erik</title>
+	<atom:link href="https://rasmuserik.com/comments/feed" rel="self" type="application/rss+xml" />
+	<link>https://rasmuserik.com</link>
+	<description>personal notes and writings</description>
+	<lastBuildDate>Mon, 23 Apr 2018 04:01:32 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+	<item>
+		<title>Comment on Simple WordPress development setup. by Sprint #2 &#8211; VEDUZ Ⓥ</title>
+		<link>https://rasmuserik.com/2018-04-19-simple-wordpress-development-setup#comment-11</link>
+		<dc:creator><![CDATA[Sprint #2 &#8211; VEDUZ Ⓥ]]></dc:creator>
+		<pubDate>Mon, 23 Apr 2018 04:01:32 +0000</pubDate>
+		<guid isPermaLink="false">https://veduz.com/?p=1116#comment-11</guid>
+		<description><![CDATA[[&#8230;] Write-up on WordPress development environment [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] Write-up on WordPress development environment [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Identitetsniveauer by Kvartal &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2016-04-01-identitetsniveauer#comment-9</link>
+		<dc:creator><![CDATA[Kvartal &#124; solsort.com]]></dc:creator>
+		<pubDate>Fri, 01 Apr 2016 04:58:21 +0000</pubDate>
+		<guid isPermaLink="false">http://blog.solsort.com/?p=720#comment-9</guid>
+		<description><![CDATA[[&#8230;] 3. Eksistentielle spørgsmål: WDYW, og niveauer-af-selv [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] 3. Eksistentielle spørgsmål: WDYW, og niveauer-af-selv [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on 1-2-3 priority by Kvartal &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2016-03-31-1-2-3-priority#comment-7</link>
+		<dc:creator><![CDATA[Kvartal &#124; solsort.com]]></dc:creator>
+		<pubDate>Thu, 31 Mar 2016 05:52:45 +0000</pubDate>
+		<guid isPermaLink="false">http://blog.solsort.com/?p=717#comment-7</guid>
+		<description><![CDATA[[&#8230;] Når jeg laver review/planlægning, foregår det typisk med 1-2-3 prioritering. [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] Når jeg laver review/planlægning, foregår det typisk med 1-2-3 prioritering. [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Kvartal by 1-2-3 priority &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2016-03-31-kvartal#comment-8</link>
+		<dc:creator><![CDATA[1-2-3 priority &#124; solsort.com]]></dc:creator>
+		<pubDate>Thu, 31 Mar 2016 05:27:34 +0000</pubDate>
+		<guid isPermaLink="false">http://blog.solsort.com/?p=719#comment-8</guid>
+		<description><![CDATA[[&#8230;] A concrete example of the 1-2-3 prioritisation can be seen in my quarterly review. [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] A concrete example of the 1-2-3 prioritisation can be seen in my quarterly review. [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on solsort direction by Kvartal &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2016-03-30-solsort-direction#comment-6</link>
+		<dc:creator><![CDATA[Kvartal &#124; solsort.com]]></dc:creator>
+		<pubDate>Thu, 31 Mar 2016 05:27:05 +0000</pubDate>
+		<guid isPermaLink="false">http://blog.solsort.com/?p=710#comment-6</guid>
+		<description><![CDATA[[&#8230;] 3. solsort.com sites (flyt wordpress-instanser til docker, separer personligt indhold fra virksomheds-site, og fokuser virksomhed mere i retning af visionen) [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] 3. solsort.com sites (flyt wordpress-instanser til docker, separer personligt indhold fra virksomheds-site, og fokuser virksomhed mere i retning af visionen) [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Tilbageblik 2015 by muBackend, and year review &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2015-12-30-tilbageblik-2015#comment-5</link>
+		<dc:creator><![CDATA[muBackend, and year review &#124; solsort.com]]></dc:creator>
+		<pubDate>Thu, 31 Dec 2015 06:22:44 +0000</pubDate>
+		<guid isPermaLink="false">http://solsort.com/?p=650#comment-5</guid>
+		<description><![CDATA[[&#8230;] http://solsort.com/2015/12/30/tilbageblik-2015 [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] <a href="http://solsort.com/2015/12/30/tilbageblik-2015" rel="nofollow">http://solsort.com/2015/12/30/tilbageblik-2015</a> [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Laptop branding by Company Content &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2015-11-14-laptop-branding#comment-4</link>
+		<dc:creator><![CDATA[Company Content &#124; solsort.com]]></dc:creator>
+		<pubDate>Sun, 15 Nov 2015 15:05:08 +0000</pubDate>
+		<guid isPermaLink="false">http://solsort.com/?p=580#comment-4</guid>
+		<description><![CDATA[[&#8230;] https://solsort.com/2015/11/14/laptop-branding/ [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] <a href="https://solsort.com/2015/11/14/laptop-branding/" rel="nofollow">https://solsort.com/2015/11/14/laptop-branding/</a> [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on MuBackend revisited by 3-day sprint: Tinkuy.dk and ClojureScript Infrastructure &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2015-10-20-mubackend-revisited#comment-3</link>
+		<dc:creator><![CDATA[3-day sprint: Tinkuy.dk and ClojureScript Infrastructure &#124; solsort.com]]></dc:creator>
+		<pubDate>Tue, 20 Oct 2015 16:01:54 +0000</pubDate>
+		<guid isPermaLink="false">http://solsort.com/?p=515#comment-3</guid>
+		<description><![CDATA[[&#8230;] MuBackend revisited [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] MuBackend revisited [&#8230;]</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Development structure, and Lemon status 1 by Lemon status 2 &#124; solsort.com</title>
+		<link>https://rasmuserik.com/2015-09-07-lemon-status-1#comment-2</link>
+		<dc:creator><![CDATA[Lemon status 2 &#124; solsort.com]]></dc:creator>
+		<pubDate>Tue, 29 Sep 2015 10:16:34 +0000</pubDate>
+		<guid isPermaLink="false">https://solsort.com/?p=393#comment-2</guid>
+		<description><![CDATA[[&#8230;] a quick write-up about software development on the lemon-project since last status, 3 weeks ago. There have been progress in several [&#8230;]]]></description>
+		<content:encoded><![CDATA[<p>[&#8230;] a quick write-up about software development on the lemon-project since last status, 3 weeks ago. There have been progress in several [&#8230;]</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

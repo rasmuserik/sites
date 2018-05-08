@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>solsort.com</title>
+	<atom:link href="https://solsort.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://solsort.com</link>
+	<description></description>
+	<lastBuildDate>Sun, 06 May 2018 11:13:15 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+	<item>
+		<title>Simple WordPress development setup.</title>
+		<link>https://solsort.com/2018/04/19/simple-wordpress-development-setup/</link>
+		<comments>https://solsort.com/2018/04/19/simple-wordpress-development-setup/#comments</comments>
+		<pubDate>Thu, 19 Apr 2018 18:41:04 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1116</guid>
+		<description><![CDATA[One configuration file, and two commands, &#8211; let docker-compose.yml contain: version: '2' services: mariadb: image: mariadb environment: MYSQL_ROOT_PASSWORD: XXXXXX volumes: - ./mariadb:/var/lib/mysql wordpress: image: wordpress ports: - 3002:80 environment: WORDPRESS_DB_PASSWORD: XXXXXX WORDPRESS_DB_USER: root WORDPRESS_DB_HOST: mariadb volumes: - ./www:/var/www/html And then run these two commands: docker-compose up npx browser-sync start --proxy "localhost:3002" --files www/** Voila, development &#8230; <a href="https://solsort.com/2018/04/19/simple-wordpress-development-setup/" class="more-link">Continue reading <span class="screen-reader-text">Simple WordPress development setup.</span></a>]]></description>
+				<content:encoded><![CDATA[<p>One configuration file, and two commands, &#8211; let <code>docker-compose.yml</code> contain:</p>
+<pre>version: '2'
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: XXXXXX
+    volumes:
+      - ./mariadb:/var/lib/mysql
+  wordpress:
+    image: wordpress
+    ports:
+      - 3002:80
+    environment:
+      WORDPRESS_DB_PASSWORD: XXXXXX
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_HOST: mariadb
+    volumes:
+      - ./www:/var/www/html
+</pre>
+<p>And then run these two commands:</p>
+<pre>docker-compose up
+npx browser-sync start --proxy "localhost:3002" --files www/**</pre>
+<p>Voila, development wordpress installation, with automatic reload <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Just create your development repository in <code>www/wp-content/plugins/</code>, make a symlink to it for easy access, and start coding&#8230;</p>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2018/04/19/simple-wordpress-development-setup/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>WordPress Notes</title>
+		<link>https://solsort.com/2018/04/09/wordpress-notes/</link>
+		<comments>https://solsort.com/2018/04/09/wordpress-notes/#respond</comments>
+		<pubDate>Mon, 09 Apr 2018 11:12:57 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://solsort.com/?p=1463</guid>
+		<description><![CDATA[Various notes about WordPress configuration and development Setup define('WP_DEBUG', true); define('WP_SITEURL', ($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']); define('WP_HOME', ($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']); Plugins JetPack allows markdown, and wordpress-app. NB: /wp-admin/admin.php?page=jetpack_modules makes it possible to disable different part of jetpack, including it statistics. Development Environment Simple WordPress Development Setup Study material https://github.com/DevinVinson/WordPress-Plugin-Boilerplate/ &#160;]]></description>
+				<content:encoded><![CDATA[<p>Various notes about WordPress configuration and development</p>
+<h2>Setup</h2>
+<pre>define('WP_DEBUG', true);
+define('WP_SITEURL', ($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']);
+define('WP_HOME', ($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']);</pre>
+<h2>Plugins</h2>
+<ul>
+<li><strong>JetPack</strong> allows markdown, and wordpress-app. NB: <code>/wp-admin/admin.php?page=jetpack_modules</code> makes it possible to disable different part of jetpack, including it statistics.</li>
+</ul>
+<h2>Development Environment</h2>
+<p><a href="https://veduz.com/2018-04-19-simple-wordpress-development-setup/">Simple WordPress Development Setup</a></p>
+<h2>Study material</h2>
+<p><a href="https://github.com/DevinVinson/WordPress-Plugin-Boilerplate/">https://github.com/DevinVinson/WordPress-Plugin-Boilerplate/</a></p>
+<div class="jetpack-video-wrapper"><iframe width="660" height="371" src="https://www.youtube.com/embed/videoseries?list=PLriKzYyLb28kR_CPMz8uierDWC2y3znI2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2018/04/09/wordpress-notes/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>JS-IPFS Mini Hackathon</title>
+		<link>https://solsort.com/2017/08/25/js-ipfs-mini-hackathon/</link>
+		<comments>https://solsort.com/2017/08/25/js-ipfs-mini-hackathon/#respond</comments>
+		<pubDate>Fri, 25 Aug 2017 09:26:38 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1220</guid>
+		<description><![CDATA[JS-IPFS Mini Hackathon, 25.-26. August 2017 I have recently started diving into the code of js-ipfs, and think it could be fun to make a mini hackathon, to see what we can build on top of it in 20 hours. Let’s meet at my place at 17:00 on Friday 25., talk about what we could &#8230; <a href="https://solsort.com/2017/08/25/js-ipfs-mini-hackathon/" class="more-link">Continue reading <span class="screen-reader-text">JS-IPFS Mini Hackathon</span></a>]]></description>
+				<content:encoded><![CDATA[<div id="content">
+<h1 id="js-ipfs-mini-hackathon-25-26-august-2017">JS-IPFS Mini Hackathon, 25.-26. August 2017</h1>
+<p>I have recently started diving into the code of <a href="https://github.com/ipfs/js-ipfs">js-ipfs</a>, and think it could be fun to make a mini hackathon, to see what we can build on top of it in 20 hours.</p>
+<p>Let’s meet at my place at 17:00 on Friday 25., talk about what we could build, and start building it. Then we find something to eat, and code and play, until we get tired. We meet again in the morning the next day, and continue, until 14:00, where we do a demo, and debriefing of what we have learned and done.</p>
+<p>It is quite easy to get started using js-ipfs, &#8211; there are some nice demo/introductions here:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Nv_Teb--1zg">pub-sub</a>(<a href="https://github.com/ipfs-shipyard/ipfs-pubsub-room-demo">src</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=-kdx8rJd8rQ">shared edit</a>(<a href="https://github.com/ipfs-shipyard/shared-editing-demo">src</a>)</li>
+</ul>
+<p>During the hackathon, we can also have small breaks, we present what we are doing, &#8211; or if we have learned something interesting. I have a projector if needed for presentations (800&#215;600, and only vga-cable, so bring adaptor or hdmi-cable, if you want to use it, and your computer do not have a vga-output).</p>
+<p>The plan is to build whatever we like, though it would be nice if the focus is ipfs/javascript. I will probably either build a small react-app that uses js-ipfs, or dive further into the js-ipfs by solving some of the github-issue. Let’s also do some pair programming for knowledge sharing.</p>
+<p>If you want to join, send me a mail (rasmuserik@solsort.com) or sms (60703081). The hackathon happens in my living room <a href="https://here.solsort.com/?55.71:12.529:12">here</a>, and we will be at most 8-10 people.</p>
+<p>Rasmus Erik <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>PS. feel free to share this to people that might be interested.</p>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/08/25/js-ipfs-mini-hackathon/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>React Material Design</title>
+		<link>https://solsort.com/2017/05/17/react-material-design/</link>
+		<comments>https://solsort.com/2017/05/17/react-material-design/#respond</comments>
+		<pubDate>Wed, 17 May 2017 09:21:52 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1210</guid>
+		<description><![CDATA[Material Design with React Trying to get an overview of different material-design frameworks for use with react. Currently Material-UI still looks as the best bet, even though it feels a bit slow/bloated. React Material-UI A bit slow/big React toolbox does not feel right on mobile/touch MUI Only one primary developer React MD Only one primary &#8230; <a href="https://solsort.com/2017/05/17/react-material-design/" class="more-link">Continue reading <span class="screen-reader-text">React Material Design</span></a>]]></description>
+				<content:encoded><![CDATA[<div id="content">
+<h1 id="material-design-with-react">Material Design with React</h1>
+<p>Trying to get an overview of different material-design frameworks for use with react.</p>
+<p>Currently Material-UI still looks as the best bet, even though it feels a bit slow/bloated.</p>
+<ul>
+<li>React
+<ul>
+<li><a href="https://github.com/callemall/material-ui">Material-UI</a> A bit slow/big</li>
+<li><a href="https://github.com/react-toolbox/react-toolbox">React toolbox</a> does not feel right on mobile/touch</li>
+<li><a href="https://github.com/muicss/mui">MUI</a> Only one primary developer</li>
+<li><a href="https://github.com/mlaursen/react-md">React MD</a> Only one primary developer</li>
+<li><a href="https://github.com/react-mdc/react-material-components-web">React Material Components Web</a> Only one primary developer. Not production ready yet.</li>
+<li>÷<a href="https://github.com/react-materialize/react-materialize">React Materialize</a></li>
+<li>÷<a href="https://github.com/react-mdl/react-mdl">React MDL</a> Deprecated</li>
+<li>÷<a href="https://github.com/OnsenUI/OnsenUI">OnsenUI</a> Cordova/hybrid-app focus, does not feel truely web/material.</li>
+<li>÷<a href="https://github.com/BerkeleyTrue/react-material">React Material</a> very rudimentary</li>
+<li>÷<a href="https://github.com/kradio3/react-mdc-web">React MDC Web</a></li>
+</ul>
+</li>
+<li>Generic
+<ul>
+<li><a href="https://github.com/material-components/material-components-web">Material Components Web</a></li>
+<li>÷ <a href="https://github.com/google/material-design-lite">Material Design Lite</a> Getting deprecated, replaced by Material Components Web</li>
+<li>÷ <a href="https://github.com/Dogfalo/materialize">Materialize</a> Menu in doc fails in firefox, which indicates not tested across browsers</li>
+</ul>
+</li>
+</ul>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/05/17/react-material-design/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Mainstream code</title>
+		<link>https://solsort.com/2017/04/20/mainstream-code/</link>
+		<comments>https://solsort.com/2017/04/20/mainstream-code/#respond</comments>
+		<pubDate>Thu, 20 Apr 2017 09:16:38 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1204</guid>
+		<description><![CDATA[I am focussing more on mainstream technologies at the moment. For many projects a large community of developers, outweights the quality of technology. There are two major reasons: 1) when delivering solutions, it will be easier for the client to find other developers that can work on / maintain the code in the later on. &#8230; <a href="https://solsort.com/2017/04/20/mainstream-code/" class="more-link">Continue reading <span class="screen-reader-text">Mainstream code</span></a>]]></description>
+				<content:encoded><![CDATA[<div id="content">
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>I am focussing more
+on mainstream technologies
+at the moment.
+
+For many projects
+a large community of developers,
+outweights the quality of technology.
+
+There are two major reasons:
+
+1) when delivering solutions,
+it will be easier for the client
+to find other developers that
+can work on / maintain the code
+in the later on.
+
+2) when making libraries
+and tools for developers,
+there is a larger market 
+and potential userbase.
+
+
+The platform I focus on is still HTML5.
+While ClojureScript is a better technology,
+JavaScript / ES7 have become Good Enough&#x2122;
+and is much more mainstream.
+</code></pre>
+</div>
+</div>
+</div>
+<div class="no-print"></div>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/04/20/mainstream-code/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Code infrastructure</title>
+		<link>https://solsort.com/2017/04/20/code-infrastructure/</link>
+		<comments>https://solsort.com/2017/04/20/code-infrastructure/#respond</comments>
+		<pubDate>Thu, 20 Apr 2017 09:16:10 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1202</guid>
+		<description><![CDATA[Code infrastructure The last couple of weeks, I have worked a bit on my JavaScript HTML5/app development tooling. I now have minimal configuration for getting new projects up and running. A new project just needs: package.json with package name $NAME_OF_PACKAGE.js the source code as literate code. and then documentation, web-site, browser-bundle, npm module etc. is &#8230; <a href="https://solsort.com/2017/04/20/code-infrastructure/" class="more-link">Continue reading <span class="screen-reader-text">Code infrastructure</span></a>]]></description>
+				<content:encoded><![CDATA[<div id="content">
+<h1 id="code-infrastructure">Code infrastructure</h1>
+<p>The last couple of weeks, I have worked a bit on my JavaScript HTML5/app development tooling. I now have minimal configuration for getting new projects up and running. A new project just needs:</p>
+<ul>
+<li><code class="highlighter-rouge">package.json</code> with package name</li>
+<li><code class="highlighter-rouge">$NAME_OF_PACKAGE.js</code> the source code as literate code.</li>
+</ul>
+<p>and then documentation, web-site, browser-bundle, npm module etc. is generated from this.</p>
+<p>The steps I go though when creating a new project is:</p>
+<ul>
+<li><code class="highlighter-rouge">simple-javascript create $PACKAGE_NAME</code> which creates the</li>
+<li>create github repository, and enable webpage from master branch.</li>
+<li><code class="highlighter-rouge">travis enable</code></li>
+<li>optionally <code class="highlighter-rouge">travis setup npm</code>, if I want to release it as a module.</li>
+<li>optionally add <code class="highlighter-rouge">Dockerfile</code> and enable automatic build on hub.docker.com, if I want it to be installable on the server.</li>
+</ul>
+<p>During development I just <code class="highlighter-rouge">yarn dev</code> and <code class="highlighter-rouge">yarn release</code>, and commit and push to github.</p>
+<hr />
+<p>I have also simplified my server setup.</p>
+<ul>
+<li>CouchDB is my database of choice, &#8211; it is generic / easy to use from HTML5/apps, so you do not need additional server code to talk with it.</li>
+<li>A simple pubsub server that allows HTML5/apps to communicate with eachother (and signal webrtc-p2p connections).</li>
+<li>A simple service runner, that runs HTML5/apps as services, based on a dynamic configuration in CouchDB. This means that I have the same APIs, and developer experience, when making services as when I write apps.</li>
+</ul>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/04/20/code-infrastructure/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Easy Publish</title>
+		<link>https://solsort.com/2017/04/18/easy-publish/</link>
+		<comments>https://solsort.com/2017/04/18/easy-publish/#respond</comments>
+		<pubDate>Tue, 18 Apr 2017 09:15:37 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1200</guid>
+		<description><![CDATA[Recently I have not gotten around to release my projects, nor write much. To improve this, I revised my publishing flow: Now: new code projects on github are now automatically added to solsort.com, and shows a dead icon, until probably set up. Now: new writings / blog posts, are just made by creating / writing &#8230; <a href="https://solsort.com/2017/04/18/easy-publish/" class="more-link">Continue reading <span class="screen-reader-text">Easy Publish</span></a>]]></description>
+				<content:encoded><![CDATA[<pre class="highlight"><code>Recently I have not
+gotten around to
+release my projects,
+nor write much.
+
+To improve this,
+I revised my publishing flow:
+
+Now: new code projects on github
+are now automatically added
+to solsort.com,
+and shows a dead icon,
+until probably set up.
+
+Now: new writings / blog posts,
+are just made by creating / 
+writing a markdown file,
+in the writings-repository.
+
+A good way to make sure
+something gets done
+is to automate it,
+so you do not have 
+to do anything :)</code></pre>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/04/18/easy-publish/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Generic backend server</title>
+		<link>https://solsort.com/2017/04/11/generic-backend-server/</link>
+		<comments>https://solsort.com/2017/04/11/generic-backend-server/#respond</comments>
+		<pubDate>Tue, 11 Apr 2017 09:14:49 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1198</guid>
+		<description><![CDATA[What would be good generic backend services to run, for making (web)apps? Based on functionality/need, maturity, standardization, and ease of maintenance, this would be my plan for a generic backend-server: Service Protocol Implementations pubsub STOMP RabbitMQ, ActiveMQ, … database CouchDB CouchDB, pouchdb-server, CouchBase filesystem WebDAV ownCloud, seafile, … reverse https/cors proxy HTTPS Caddy, nginx, apache, &#8230; <a href="https://solsort.com/2017/04/11/generic-backend-server/" class="more-link">Continue reading <span class="screen-reader-text">Generic backend server</span></a>]]></description>
+				<content:encoded><![CDATA[<p>What would be good generic <em>backend</em> services to run, for making (web)apps?</p>
+<p>Based on functionality/need, maturity, standardization, and ease of maintenance, this would be my plan for a generic backend-server:</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Protocol</th>
+<th>Implementations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pubsub</td>
+<td>STOMP</td>
+<td><em>RabbitMQ</em>, ActiveMQ, …</td>
+</tr>
+<tr>
+<td>database</td>
+<td>CouchDB</td>
+<td><em>CouchDB</em>, pouchdb-server, CouchBase</td>
+</tr>
+<tr>
+<td>filesystem</td>
+<td>WebDAV</td>
+<td><em>ownCloud</em>, seafile, …</td>
+</tr>
+<tr>
+<td>reverse https/cors proxy</td>
+<td>HTTPS</td>
+<td><em>Caddy</em>, nginx, apache, …</td>
+</tr>
+<tr>
+<td>cron’ed webapps</td>
+<td>HTML5</td>
+<td><em>electron</em>, nwjs, …</td>
+</tr>
+<tr>
+<td>(email)</td>
+<td>SMTP</td>
+<td><em>haraka + export to couchdb</em>, …</td>
+</tr>
+<tr>
+<td>(instant messaging)</td>
+<td>matrix</td>
+<td><em>synapse</em>, ..</td>
+</tr>
+<tr>
+<td>(dev environment)</td>
+<td>https+git</td>
+<td><em>gitlab</em>, ..</td>
+</tr>
+<tr>
+<td>(distributed filesystem)</td>
+<td>IPFS</td>
+<td><em>go-ipfs</em>, js-ipfs</td>
+</tr>
+<tr>
+<td>(search)</td>
+<td></td>
+<td><em>elastic-search</em></td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/04/11/generic-backend-server/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Future Proof Apps</title>
+		<link>https://solsort.com/2017/04/11/future-proof-apps/</link>
+		<comments>https://solsort.com/2017/04/11/future-proof-apps/#respond</comments>
+		<pubDate>Tue, 11 Apr 2017 09:13:09 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1196</guid>
+		<description><![CDATA[Will you be able to easily run your apps 20 years from now, without any maintenance? Android &#8211; very unlikely. iOS &#8211; very unlikely. HTML5 &#8211; probably, if they are self-contained. An app is self-contained if it does not references any external resources. That means no reliance on proprietary APIs, no loading of resources from &#8230; <a href="https://solsort.com/2017/04/11/future-proof-apps/" class="more-link">Continue reading <span class="screen-reader-text">Future Proof Apps</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Will you be able to easily run your apps 20 years from now, without any maintenance?</p>
+<ul>
+<li>Android &#8211; very unlikely.</li>
+<li>iOS &#8211; very unlikely.</li>
+<li>HTML5 &#8211; probably, if they are self-contained.</li>
+</ul>
+<p>An app is self-contained if it does not references any external resources. That means no reliance on proprietary APIs, no loading of resources from CDNs, etc.</p>
+<p>If a backend, API, or other service is needed, it should be possible for the user to set up their own version, and enter the url in the app. The service should be open, generic, stable, easy to set up, and have a large user base at the time of writing. There should be no custom backend code / schemas outside of the app itself. Examples of such services could be <a href="https://pouchdb.com/guides/replication.html#couchdb-sync">CouchDB</a>, <a href="https://www.rabbitmq.com/web-stomp.html">STOMP</a>, and in the future maybe <a href="https://matrix.org">matrix</a> and <a href="https://ipfs.io">IPFS</a>.</p>
+<p>The easy test is to open <code class="highlighter-rouge">index.html</code> of the project on an offline computer with different browsers with wiped caches, and check if everything works. If it depends on services, &#8211; they should be able to run on the same offline computer.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/04/11/future-proof-apps/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Simple JavaScript</title>
+		<link>https://solsort.com/2017/04/10/simple-javascript/</link>
+		<comments>https://solsort.com/2017/04/10/simple-javascript/#respond</comments>
+		<pubDate>Mon, 10 Apr 2017 09:12:45 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1194</guid>
+		<description><![CDATA[Simple JavaScript When I make Simple JavaScript modules/apps, I just want to make: package.json name description homepage version "devDependencies": {"simple-javascript": ...} "scripts": {"dev":"simple-javascript dev","build":...,"test":...} icon.png icon for the module / application $name.js Modern browser code, i.e. assume async/await is available. Use require, not import, such that it could be loaded in modern browser without preprocessing &#8230; <a href="https://solsort.com/2017/04/10/simple-javascript/" class="more-link">Continue reading <span class="screen-reader-text">Simple JavaScript</span></a>]]></description>
+				<content:encoded><![CDATA[<div id="content">
+<h1 id="simple-javascript">Simple JavaScript</h1>
+<p>When I make <code class="highlighter-rouge">Simple JavaScript</code> modules/apps, I just want to make:</p>
+<ul>
+<li><code class="highlighter-rouge">package.json</code>
+<ul>
+<li><code class="highlighter-rouge">name</code></li>
+<li><code class="highlighter-rouge">description</code></li>
+<li><code class="highlighter-rouge">homepage</code></li>
+<li><code class="highlighter-rouge">version</code></li>
+<li><code class="highlighter-rouge">"devDependencies": {"simple-javascript": ...}</code></li>
+<li><code class="highlighter-rouge">"scripts": {"dev":"simple-javascript dev","build":...,"test":...}</code></li>
+</ul>
+</li>
+<li><code class="highlighter-rouge">icon.png</code> icon for the module / application</li>
+<li><code class="highlighter-rouge">$name.js</code>
+<ul>
+<li>Modern browser code, i.e. assume <code class="highlighter-rouge">async</code>/<code class="highlighter-rouge">await</code> is available. Use <code class="highlighter-rouge">require</code>, not <code class="highlighter-rouge">import</code>, such that it could be loaded in modern browser without preprocessing with reun, if no jsx is used.</li>
+<li>Literate source, also used as project documentation.</li>
+<li>Exported symbols/subproperties starting with <code class="highlighter-rouge">TEST</code> are unit-tests. Throws on error, may return <code class="highlighter-rouge">Promise</code>. Could be removed by a minifier later on.</li>
+<li><code class="highlighter-rouge">exports.main</code> is main entry, if exists</li>
+</ul>
+</li>
+<li><code class="highlighter-rouge">.travis.yml</code> (if autodeploy of module is needed, &#8211; <code class="highlighter-rouge">travis setup npm</code>)</li>
+</ul>
+<p>And then, the following files should be autogenerated by <code class="highlighter-rouge">yarn build</code>:</p>
+<ul>
+<li><code class="highlighter-rouge">README.md</code> generated from package.json</li>
+<li><code class="highlighter-rouge">CNAME</code> generated from package.json &#8211; homepage</li>
+<li><code class="highlighter-rouge">.gitignore</code> ignores <code class="highlighter-rouge">node_modules</code> <code class="highlighter-rouge">lib.js</code></li>
+<li><code class="highlighter-rouge">dist.js</code> bundled src.js to run in webbrowser</li>
+<li><code class="highlighter-rouge">lib.js</code> ES2015 version of src.js</li>
+<li><code class="highlighter-rouge">index.html</code>
+<ul>
+<li>has an element with id <code class="highlighter-rouge">app</code></li>
+<li>load the module, and start executing <code class="highlighter-rouge">exports.main</code></li>
+<li>load package.json, and shows name/version (and set document title)</li>
+<li>load/shows the icon</li>
+<li>load/shows README.md, converting it to html</li>
+<li>load/shows the source code</li>
+<li>run unit tests, and shows result.</li>
+</ul>
+</li>
+</ul>
+<p>The repository should be a self-contained bundle, i.e. <code class="highlighter-rouge">index.*</code> is included in the git-repository, and when <code class="highlighter-rouge">index.html</code> is opened in the browser, it just runs, without dependencies on any urls etc.</p>
+</div>
+]]></content:encoded>
+			<wfw:commentRss>https://solsort.com/2017/04/10/simple-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

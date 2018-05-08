@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://solsort.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://solsort.com/wp-content/themes/twentyfifteen/js/html5.js"></script>
+	<![endif]-->
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Async loaded figwheel cljs &#8211; solsort.com</title>
+<link rel='dns-prefetch' href='https://s0.wp.com/' />
+<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="solsort.com &raquo; Feed" href="https://solsort.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="solsort.com &raquo; Comments Feed" href="https://solsort.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="solsort.com &raquo; Async loaded figwheel cljs Comments Feed" href="https://solsort.com/2015/09/10/async-loaded-figwheel-cljs/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/solsort.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.5"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentyfifteen-jetpack-css'  href='https://solsort.com/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfifteen.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://solsort.com/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-style-css'  href='https://solsort.com/wp-content/themes/twentyfifteen/style.css?ver=4.9.5' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css'  href='https://solsort.com/wp-content/themes/twentyfifteen/css/ie.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css'  href='https://solsort.com/wp-content/themes/twentyfifteen/css/ie7.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack_css-css'  href='https://solsort.com/wp-content/plugins/jetpack/css/jetpack.css?ver=6.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://solsort.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://solsort.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://solsort.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://solsort.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://solsort.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Hack4dk warmup' href='2015-09-09-hack4dk-warmup.html' />
+<link rel='next' title='Projekt Lemon' href='2015-09-15-projekt-lemon.html' />
+<meta name="generator" content="WordPress 4.9.5" />
+<link rel="canonical" href="2015-09-10-async-loaded-figwheel-cljs.html" />
+<link rel='shortlink' href='https://solsort.com/?p=412' />
+<link rel="alternate" type="application/json+oembed" href="https://solsort.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsolsort.com%2F2015%2F09%2F10%2Fasync-loaded-figwheel-cljs%2F" />
+</head>
+
+<body class="post-template-default single single-post postid-412 single-format-standard wp-custom-logo">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="2015-09-10-async-loaded-figwheel-cljs.html#content">Skip to content</a>
+
+	<div id="sidebar" class="sidebar">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+				<a href="https://solsort.com/" class="custom-logo-link" rel="home" itemprop="url"><img width="248" height="248" src="https://solsort.com/wp-content/uploads/sites/4/2018/05/cropped-icon.png" class="custom-logo" alt="solsort.com" itemprop="logo" srcset="https://solsort.com/wp-content/uploads/sites/4/2018/05/cropped-icon.png 248w, https://solsort.com/wp-content/uploads/sites/4/2018/05/cropped-icon-150x150.png 150w" sizes="(max-width: 248px) 100vw, 248px" /></a>						<p class="site-title"><a href="https://solsort.com/" rel="home">solsort.com</a></p>
+									<button class="secondary-toggle">Menu and widgets</button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
+
+			<div id="secondary" class="secondary">
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="menu-top-menu-container"><ul id="menu-top-menu" class="nav-menu"><li id="menu-item-969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-969"><a href="https://veduz.com/">veduz.company</a></li>
+<li id="menu-item-971" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-971"><a href="https://solsort.com">solsort.company</a></li>
+<li id="menu-item-970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-970"><a href="index.html">Rasmus Erik Voel Jensen</a></li>
+</ul></div>			</nav><!-- .main-navigation -->
+		
+		
+					<div id="widget-area" class="widget-area" role="complementary">
+				<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://solsort.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search" />
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Technical Notes</h2>		<ul>
+											<li>
+					<a href="2018-04-19-simple-wordpress-development-setup.html">Simple WordPress development setup.</a>
+									</li>
+											<li>
+					<a href="https://solsort.com/2018/04/09/wordpress-notes/">WordPress Notes</a>
+									</li>
+											<li>
+					<a href="2017-08-25-js-ipfs-mini-hackathon.html">JS-IPFS Mini Hackathon</a>
+									</li>
+											<li>
+					<a href="2017-05-17-react-material-design.html">React Material Design</a>
+									</li>
+											<li>
+					<a href="2017-04-20-mainstream-code.html">Mainstream code</a>
+									</li>
+											<li>
+					<a href="2017-04-20-code-infrastructure.html">Code infrastructure</a>
+									</li>
+											<li>
+					<a href="2017-04-18-easy-publish.html">Easy Publish</a>
+									</li>
+											<li>
+					<a href="2017-04-11-generic-backend-server.html">Generic backend server</a>
+									</li>
+											<li>
+					<a href="2017-04-11-future-proof-apps.html">Future Proof Apps</a>
+									</li>
+											<li>
+					<a href="2017-04-10-simple-javascript.html">Simple JavaScript</a>
+									</li>
+											<li>
+					<a href="2017-02-08-user-interfaces-as-pure-json-data.html">User interfaces as pure JSON data</a>
+									</li>
+											<li>
+					<a href="2017-02-08-shell-ipfs-notes.html">Shell/ipfs notes</a>
+									</li>
+											<li>
+					<a href="2017-01-31-thoughts-about-distributed-cloud.html">Thoughts about distributed cloud</a>
+									</li>
+											<li>
+					<a href="2017-01-11-deploying-with-github-travis-and-unpkg.html">deploying with github travis and unpkg</a>
+									</li>
+											<li>
+					<a href="2017-01-03-checklists.html">checklists</a>
+									</li>
+											<li>
+					<a href="2016-12-29-javascript-features-in-modern-browsers-2016.html">JavaScript features in modern browsers 2016</a>
+									</li>
+											<li>
+					<a href="2016-12-21-bootstrapped-clojurescript.html">Bootstrapped ClojureScript</a>
+									</li>
+											<li>
+					<a href="2016-12-15-extending-others-webservices.html">Extending others webservices</a>
+									</li>
+											<li>
+					<a href="2016-12-05-blog-editor-notes.html">Blog Editor Notes</a>
+									</li>
+											<li>
+					<a href="2016-11-20-data-calculator-user-interaction.html">Data Calculator User Interaction</a>
+									</li>
+											<li>
+					<a href="2016-11-19-virtual-machine-revisited.html">Virtual machine, &#8211; revisited</a>
+									</li>
+											<li>
+					<a href="2016-11-16-virtual-machine-memory-layout-for-a-functional-language-for-embedded-systems.html">Virtual Machine Memory Layout for a Functional Language for Embedded Systems</a>
+									</li>
+											<li>
+					<a href="2016-11-16-setting-up-android-development-react-native-under-linux.html">Setting up Android development / React Native under Linux</a>
+									</li>
+											<li>
+					<a href="2016-11-15-important-javascript-features.html">Important JavaScript Features</a>
+									</li>
+											<li>
+					<a href="2016-07-15-decentrale-apps.html">Decentrale apps</a>
+									</li>
+											<li>
+					<a href="2016-06-27-tools-for-text-editing.html">Tools for text editing</a>
+									</li>
+											<li>
+					<a href="2016-06-07-habitica-backup.html">Habitica backup</a>
+									</li>
+											<li>
+					<a href="2016-06-05-owncloud-and-docker.html">OwnCloud and Docker</a>
+									</li>
+											<li>
+					<a href="2016-05-03-experience-with-caddy-webserver.html">Experience with Caddy webserver</a>
+									</li>
+											<li>
+					<a href="2016-04-21-trie-performance.html">Trie performance</a>
+									</li>
+											<li>
+					<a href="2016-04-17-mobibl.html">Mobibl</a>
+									</li>
+											<li>
+					<a href="2016-04-09-notes-about-a-distributed-database-design.html">Notes about a distributed database design</a>
+									</li>
+											<li>
+					<a href="2016-04-06-server-set-up-caddy-and-docker.html">Server set up: Caddy and Docker</a>
+									</li>
+											<li>
+					<a href="2016-04-05-probabilistic-sorting.html">Probabilistic sorting</a>
+									</li>
+											<li>
+					<a href="2016-01-03-mubackend-2.html">muBackend</a>
+									</li>
+											<li>
+					<a href="2016-01-02-mobile-html5-react-libraries.html">Mobile HTML5 React libraries</a>
+									</li>
+											<li>
+					<a href="2016-01-01-interesting-technologies.html">Interesting technologies</a>
+									</li>
+											<li>
+					<a href="2015-12-31-mubackend-and-year-review.html">muBackend, and year review</a>
+									</li>
+											<li>
+					<a href="2015-12-18-mubackend-and-beginning-a-book.html">muBackend, and beginning a book</a>
+									</li>
+											<li>
+					<a href="2015-12-15-prepare-old-apps-for-publication.html">Prepare old apps for publication</a>
+									</li>
+											<li>
+					<a href="2015-12-09-app-skeleton.html">App Skeleton</a>
+									</li>
+											<li>
+					<a href="2015-12-02-bibapp-done-planningstrategy.html">BibApp Done. Planning+strategy.</a>
+									</li>
+											<li>
+					<a href="2015-11-30-bibapp-bugfixes-and-report.html">BibApp bugfixes and report</a>
+									</li>
+											<li>
+					<a href="2015-11-26-bibapp-working-version.html">BibApp working version</a>
+									</li>
+											<li>
+					<a href="2015-11-18-bibapp-progress.html">BibApp Progress</a>
+									</li>
+											<li>
+					<a href="2015-11-18-data-json.html">Data JSON</a>
+									</li>
+											<li>
+					<a href="2015-11-16-rethinking-bibapp.html">Rethinking BibApp</a>
+									</li>
+											<li>
+					<a href="2015-11-15-idea-for-simplifying-authentication.html">Idea for simplifying authentication</a>
+									</li>
+											<li>
+					<a href="2015-11-15-old-front-page-with-project-list.html">Old front-page with project list</a>
+									</li>
+											<li>
+					<a href="2015-11-15-variable-byte-encoding-of-unsigned-integers.html">Variable byte encoding of unsigned integers.</a>
+									</li>
+											<li>
+					<a href="2015-11-15-wordpress-theme-development.html">WordPress theme development</a>
+									</li>
+											<li>
+					<a href="2015-11-14-lets-encrypt.html">Let&#8217;s encrypt!</a>
+									</li>
+											<li>
+					<a href="2015-11-14-word-order-in-programming-and-human-languages.html">Word order in programming and human languages</a>
+									</li>
+											<li>
+					<a href="2015-11-12-bibapp-infrastructure.html">BibApp Infrastructure</a>
+									</li>
+											<li>
+					<a href="2015-11-06-solsort-platform-and-practical-stuff.html">Solsort platform and practical stuff</a>
+									</li>
+											<li>
+					<a href="2015-10-29-ucc-organism-debug.html">UCC-organism debug</a>
+									</li>
+											<li>
+					<a href="2015-10-20-tinkuy-dk-and-clojurescript-infrastructure.html">Tinkuy.dk and ClojureScript Infrastructure</a>
+									</li>
+											<li>
+					<a href="2015-10-20-mubackend-revisited.html">MuBackend revisited</a>
+									</li>
+											<li>
+					<a href="2015-10-15-library-data.html">Library Data</a>
+									</li>
+											<li>
+					<a href="2015-10-07-b-trie.html">B-trie</a>
+									</li>
+											<li>
+					<a href="2015-10-02-3-day-sprint-hack4dk.html">3-day sprint: Hack4DK</a>
+									</li>
+											<li>
+					<a href="2015-09-29-lemon-status-2.html">Lemon status 2</a>
+									</li>
+											<li>
+					<a href="2015-09-17-app-entry-point.html">App entry point</a>
+									</li>
+											<li>
+					<a href="2015-09-15-projekt-lemon.html">Projekt Lemon</a>
+									</li>
+											<li>
+					<a href="2015-09-10-async-loaded-figwheel-cljs.html">Async loaded figwheel cljs</a>
+									</li>
+											<li>
+					<a href="2015-09-09-hack4dk-warmup.html">Hack4dk warmup</a>
+									</li>
+											<li>
+					<a href="2015-09-08-solsort-widget-in-progress.html">solsort widget in progress</a>
+									</li>
+											<li>
+					<a href="2015-09-07-lemon-status-1.html">Development structure, and Lemon status 1</a>
+									</li>
+											<li>
+					<a href="2015-08-26-mubackend.html">MuBackend</a>
+									</li>
+											<li>
+					<a href="2015-08-22-peer-app-notes.html">Peer app notes</a>
+									</li>
+											<li>
+					<a href="2015-08-18-responsive-base-app-design.html">Responsive base app design</a>
+									</li>
+											<li>
+					<a href="2015-08-17-mobile-ui.html">Mobile UI</a>
+									</li>
+											<li>
+					<a href="2015-08-05-194.html">Git workflow with github and waffle</a>
+									</li>
+											<li>
+					<a href="2015-08-04-20-years-of-technology.html">20 years of technology</a>
+									</li>
+											<li>
+					<a href="2015-07-28-programmering-pa-skoleskemaet.html">Programmering på skoleskemaet</a>
+									</li>
+											<li>
+					<a href="2015-07-19-configuration-management-tools.html">Configuration management tools</a>
+									</li>
+											<li>
+					<a href="2015-07-18-solsort-backend-tech.html">Solsort backend tech</a>
+									</li>
+											<li>
+					<a href="2015-07-09-tech-videos-for-cooking-and-dishwashing.html">Tech videos for cooking and dishwashing</a>
+									</li>
+											<li>
+					<a href="2015-07-08-pouchdb-get-internals.html">PouchDB .get internals</a>
+									</li>
+											<li>
+					<a href="2015-07-07-web-data-storage.html">Web data storage</a>
+									</li>
+											<li>
+					<a href="2015-06-30-github-shields-and-badges.html">GitHub shields and badges</a>
+									</li>
+											<li>
+					<a href="2015-06-26-programming-languages.html">Programming Languages</a>
+									</li>
+											<li>
+					<a href="2015-06-21-making-modules-for-clojureclojurescript.html">Making modules for Clojure/ClojureScript</a>
+									</li>
+											<li>
+					<a href="2015-06-19-coding-tips.html">Coding tips</a>
+									</li>
+											<li>
+					<a href="2015-06-09-sorting-photos-with-linux-shell-scripting.html">Sorting photos with linux shell scripting</a>
+									</li>
+											<li>
+					<a href="2015-06-04-why-clojurescript.html">Why ClojureScript?</a>
+									</li>
+					</ul>
+		</aside>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-412" class="post-412 post type-post status-publish format-standard hentry category-tech tag-clojurescript">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">Async loaded figwheel cljs</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>As a part of developing ClojureScript widgets, I would like to be able to use figwheel development for code embedded in another site. The challenge is that the code is just loaded async from another url. This breaks the figwheel-setup as the relative paths does not work anymore, and scripts cannot be loaded with <code>document.write("&lt;</code><code>script ...&gt;");</code> which closure uses for loading.<span id="more-412"></span></p>
+<p>Because the script is loaded async, the following error occur:</p>
+<p style="padding-left: 30px"><code>Failed to execute 'write' on 'Document': It isn't possible to write into a document from an asynchronously-loaded external script unless it is explicitly opened.</code></p>
+<p>And the of course the figwheel source fails because, it has relative paths.</p>
+<p>Essentially this can be solved, by rewriting the figwheel entry javascript code with the following changes:</p>
+<ol>
+<li>No use of document.write</li>
+<li>Set goog.ENABLE_CHROME_APP_SAFE_SCRIPT_LOADING to true, which has the effect that closure will not use document.write for loading scripts.</li>
+<li>Manually load goog/deps.js, that closure tries to load before document.write was disabled for loading scripts.</li>
+</ol>
+<p>After these changes, it is possible to link to figwheel just async loading a single js-file, and have nice interactive cljs-widget development within another site 🙂</p>
+<p>Actual code <a href="https://github.com/rasmuserik/solsort-util/blob/0972268b21595dfcf34636c713f7deeee02d3d3c/resources/public/dev.js">here</a>.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="2015-09-10-async-loaded-figwheel-cljs.html" rel="bookmark"><time class="entry-date published updated" datetime="2015-09-10T08:11:02+00:00">September 10, 2015</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Author </span><a class="url fn n" href="https://solsort.com/author/rasmuserik/">rasmuserik</a></span></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="https://solsort.com/category/tech/" rel="category tag">Tech</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://solsort.com/tag/clojurescript/" rel="tag">ClojureScript</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="2015-09-09-hack4dk-warmup.html" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Hack4dk warmup</span></a></div><div class="nav-next"><a href="2015-09-15-projekt-lemon.html" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Projekt Lemon</span></a></div></div>
+	</nav>
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201819'></script>
+<script type='text/javascript' src='https://solsort.com/wp-content/themes/twentyfifteen/js/skip-link-focus-fix.js?ver=20141010'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://solsort.com/wp-content/themes/twentyfifteen/js/functions.js?ver=20150330'></script>
+<script type='text/javascript' src='https://solsort.com/wp-includes/js/wp-embed.min.js?ver=4.9.5'></script>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Rasmus Erik</title>
+	<atom:link href="https://rasmuserik.com/feed" rel="self" type="application/rss+xml" />
+	<link>https://rasmuserik.com</link>
+	<description>personal notes and writings</description>
+	<lastBuildDate>Tue, 08 May 2018 05:21:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+
+<image>
+	<url>https://rasmuserik.com/wp-content/uploads/sites/2/2018/01/cropped-icon-3-32x32.png</url>
+	<title>Rasmus Erik</title>
+	<link>https://rasmuserik.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>project vs product</title>
+		<link>https://rasmuserik.com/2018-05-03-project-vs-product</link>
+		<comments>https://rasmuserik.com/2018-05-03-project-vs-product#respond</comments>
+		<pubDate>Thu, 03 May 2018 07:26:44 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=1289</guid>
+		<description><![CDATA[Words matter. I can use the words projects / products interchangeably as I just build something I deliver. Using the word product makes it more result-oriented, even though it is the same in this context.]]></description>
+				<content:encoded><![CDATA[<p>Words matter.</p>
+<p>I can use the words<br />
+projects / products<br />
+interchangeably as<br />
+I just build something I deliver.</p>
+<p>Using the word product<br />
+makes it more result-oriented,<br />
+even though it is the same<br />
+in this context.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://rasmuserik.com/2018-05-03-project-vs-product/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Simple WordPress development setup.</title>
+		<link>https://rasmuserik.com/2018-04-19-simple-wordpress-development-setup</link>
+		<comments>https://rasmuserik.com/2018-04-19-simple-wordpress-development-setup#comments</comments>
+		<pubDate>Thu, 19 Apr 2018 18:41:04 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://veduz.com/?p=1116</guid>
+		<description><![CDATA[One configuration file, and two commands, &#8211; let docker-compose.yml contain: version: '2' services: mariadb: image: mariadb environment: MYSQL_ROOT_PASSWORD: XXXXXX volumes: - ./mariadb:/var/lib/mysql wordpress: image: wordpress ports: - 3002:80 environment: WORDPRESS_DB_PASSWORD: XXXXXX WORDPRESS_DB_USER: root WORDPRESS_DB_HOST: mariadb volumes: - ./www:/var/www/html And then run these two commands: docker-compose up npx browser-sync start --proxy "localhost:3002" --files www/** Voila, development &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-04-19-simple-wordpress-development-setup" class="more-link">Continue reading<span class="screen-reader-text"> "Simple WordPress development setup."</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p>One configuration file, and two commands, &#8211; let <code>docker-compose.yml</code> contain:</p>
+<pre>version: '2'
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: XXXXXX
+    volumes:
+      - ./mariadb:/var/lib/mysql
+  wordpress:
+    image: wordpress
+    ports:
+      - 3002:80
+    environment:
+      WORDPRESS_DB_PASSWORD: XXXXXX
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_HOST: mariadb
+    volumes:
+      - ./www:/var/www/html
+</pre>
+<p>And then run these two commands:</p>
+<pre>docker-compose up
+npx browser-sync start --proxy "localhost:3002" --files www/**</pre>
+<p>Voila, development wordpress installation, with automatic reload <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Just create your development repository in <code>www/wp-content/plugins/</code>, make a symlink to it for easy access, and start coding&#8230;</p>
+]]></content:encoded>
+			<wfw:commentRss>https://rasmuserik.com/2018-04-19-simple-wordpress-development-setup/feed</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Bus factor</title>
+		<link>https://rasmuserik.com/2018-04-11-bus-factor</link>
+		<comments>https://rasmuserik.com/2018-04-11-bus-factor#respond</comments>
+		<pubDate>Wed, 11 Apr 2018 05:44:25 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=1099</guid>
+		<description><![CDATA[The bus factor is the minimum number of people that needs to be run over by a bus, before a project, or similar, dies. This is a good concept to bear in mind, when making new projects, &#8211; not because I expect to be hit by a bus, &#8211; but many things can happen in &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-04-11-bus-factor" class="more-link">Continue reading<span class="screen-reader-text"> "Bus factor"</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p>The bus factor is the minimum number of people that needs to be run over by a bus, before a project, or similar, dies.</p>
+<p><span id="more-1099"></span></p>
+<p>This is a good concept to bear in mind, when making new projects, &#8211; not because I expect to be hit by a bus, &#8211; but many things can happen in life where you choose to move on.</p>
+<p>Clean code, and good documentation eliminates the problems of the bus factor.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://rasmuserik.com/2018-04-11-bus-factor/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>veduz logo</title>
+		<link>https://rasmuserik.com/2018-04-07-veduz-logo</link>
+		<comments>https://rasmuserik.com/2018-04-07-veduz-logo#respond</comments>
+		<pubDate>Sat, 07 Apr 2018 17:41:01 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=914</guid>
+		<description><![CDATA[Veduz (my new company) needed a logo. It should be simple recognizable, etc. My initial choice is just to use a v inscribed in a circle: It is easy to draw, and remember. It is a unicode symbol (like other specials letters) meaning that it can be included in text, where images are otherwise not &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-04-07-veduz-logo" class="more-link">Continue reading<span class="screen-reader-text"> "veduz logo"</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p>Veduz (my new company) needed a logo.<br />
+It should be simple recognizable, etc.<span id="more-914"></span></p>
+<p>My initial choice is just to use<br />
+a v inscribed in a circle:</p>
+<ul>
+<li>It is easy to draw, and remember.</li>
+<li>It is a unicode symbol<br />
+(like other specials letters)<br />
+meaning that it can be included<br />
+in text, where images are otherwise<br />
+not possible.</li>
+<li>It has some similarity to the logo<br />
+of my solsort company,<br />
+which is also based on a circle.</li>
+</ul>
+<p>The font-based logo is just: Ⓥ<br />
+where the angles, lines, etc.<br />
+depends on the font.</p>
+<p>There should also be an image logo.<br />
+If we draw the V, such that the line segments<br />
+starts/ends on the circle, it looks like this:</p>
+<p><img class="alignnone size-thumbnail wp-image-919" src="https://e.veduz.com/wp-content/uploads/sites/2/2018/04/veduz-bw-150x150.png" alt="" width="150" height="150" srcset="https://rasmuserik.com/wp-content/uploads/sites/2/2018/04/veduz-bw-150x150.png 150w, https://rasmuserik.com/wp-content/uploads/sites/2/2018/04/veduz-bw-300x300.png 300w, https://rasmuserik.com/wp-content/uploads/sites/2/2018/04/veduz-bw-100x100.png 100w, https://rasmuserik.com/wp-content/uploads/sites/2/2018/04/veduz-bw.png 480w" sizes="(max-width: 150px) 100vw, 150px" /></p>
+<p>This almost looks like an<br />
+uncolored opening flower bud,<br />
+so I decide to fill it<br />
+with complementary colors<br />
+green-magenta (in the RGB-colorspace),<br />
+and tune the line width, which yields:</p>
+<p><img class="alignnone size-thumbnail wp-image-918" src="https://e.veduz.com/wp-content/uploads/sites/2/2018/04/veduz-150x150.png" alt="" width="150" height="150" /></p>
+<p>Which is the new image logo for veduz,<br />
+which also reflect the purpose<br />
+of making projects grow / flower.</p>
+<p>The drawing was done,<br />
+by writing an svg-image<br />
+by hand:</p>
+<pre>&lt;svg xmlns="http://www.w3.org/2000/svg" 
+  width="512" height="512" 
+  viewBox="-1.1, -1.1, 2.2, 2.2"&gt; 
+&lt;path
+  d="M 0 1 a 1 1 0 0 0 0.658 -1.753" 
+  fill="#090" fill-opacity="0.5"/&gt; 
+&lt;path
+  d="M 0 1 a 1 1 0 0 1 -0.658 -1.753" 
+  fill="#090" fill-opacity="0.5"/&gt; 
+&lt;path 
+  d="M 0.658 -0.753 L 0 1 L -0.658 -0.753 a 1 1 0 0 1 1.316 0"
+  fill="#909" fill-opacity="0.5"
+  stroke-width="0.07" stroke="black" stroke-linejoin="bevel"/&gt; 
+&lt;circle 
+  cx="0" cy="0" r="1" 
+  stroke="black" stroke-width="0.07" fill-opacity="0"/&gt; 
+&lt;/svg&gt;</pre>
+]]></content:encoded>
+			<wfw:commentRss>https://rasmuserik.com/2018-04-07-veduz-logo/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>fællesspisning fredag før dans</title>
+		<link>https://rasmuserik.com/2018-04-05-faellesspisning-fredag-for-dans</link>
+		<pubDate>Thu, 05 Apr 2018 01:00:25 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=342</guid>
+		<description><![CDATA[Kære venner, venners venner, etc. i morgen, fredag, er der swing/blues-dans i Happy Feet 🙂 Inspireret af Blues Lab foreslår jeg, at vi mødes og spiser aftensmad sammen inden, hvor vi tager en ret med hver (gerne vegetarisk) til et fælles bord. Jeg bor 5 minutter på cykel / 15 minutter til fods fra Happy Feet, &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-04-05-faellesspisning-fredag-for-dans" class="more-link">Continue reading<span class="screen-reader-text"> "fællesspisning fredag før dans"</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p>Kære venner, venners venner, etc.</p>
+<p>i morgen, fredag, er der<br />
+<a href="https://www.facebook.com/events/1714787818569517/">swing/blues-dans i Happy Feet</a> <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Inspireret af <a href="https://www.facebook.com/groups/1879581738986135/">Blues Lab</a><br />
+foreslår jeg, at vi mødes<br />
+og spiser aftensmad sammen inden,<br />
+hvor vi tager en ret med hver<br />
+(gerne vegetarisk) til et fælles bord.<span id="more-903"></span></p>
+<p>Jeg bor 5 minutter på cykel /<br />
+15 minutter til fods fra Happy Feet,<br />
+og lægger gerne hus til, &#8211; min addresse er:<br />
+<a href="http://www.openstreetmap.org/node/340555429#map=14/55.71/12.53">Tingskrivervej 21 3tv, 2400 København NV</a>.</p>
+<p>Send en mail / sms hertil<br />
+rasmuserik@solsort.com / 60703081<br />
+om I kommer, så jeg ved hvor mange<br />
+tallerkener, stole etc. jeg skal finde frem <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Nye dansere er også velkommen:<br />
+Happy Feet starter med intro til swing + blues<br />
+så dette kan være en lejlighed<br />
+til at introducere venner til dansen <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Jeg er hjemme fra kl 16:30 af,<br />
+hvorefter I er velkomne til at dukke op,<br />
+&#8211; der er også musik og gulvplads<br />
+til en opvarmningsdans,<br />
+inden vi tager videre til Happy Feet.</p>
+<p>Du er meget velkommen til,<br />
+at give invitationen videre <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Vi ses, Rasmus Erik <img src="https://s.w.org/images/core/emoji/2.4/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>PS. Der er stole til 12 som sidder og spiser,<br />
+&#8211; samt dans samtidigt i den tilstødende stue.</p>
+<p>PPS. Hvis du ikke kan nå at lave en ret,<br />
+men gerne vil være med alligevel,<br />
+går det nok, da der plejer at være rigeligt med mad.</p>
+<p><img class="alignleft size-medium wp-image-345" src="https://veduz.rasmuserik.com/wp-content/uploads/2018/04/IMG_1476-tortilla-300x180.jpg" alt="" width="300" height="180" srcset="https://rasmuserik.com/wp-content/uploads/sites/2/2018/04/IMG_1476-tortilla-300x180.jpg 300w, https://rasmuserik.com/wp-content/uploads/sites/2/2018/04/IMG_1476-tortilla.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>dance</title>
+		<link>https://rasmuserik.com/2018-03-22-dance</link>
+		<comments>https://rasmuserik.com/2018-03-22-dance#respond</comments>
+		<pubDate>Thu, 22 Mar 2018 05:19:21 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=1318</guid>
+		<description><![CDATA[Notice: List of dance events has moved to events. Dance notes (in progress) My dance I prefer fusion dance, such as contact-tango. My roots come from argentine tango (since 2003), and later many other dances, both solo and social. Get in touch, if you feel like a dance exchange, especially if you have different dance roots than I, as &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-03-22-dance" class="more-link">Continue reading<span class="screen-reader-text"> "dance"</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p><strong>Notice:</strong> List of dance events has moved to<strong> <a href="https://rasmuserik.com/events">events</a>.</strong></p>
+<h1>Dance notes (in progress)</h1>
+<h2>My dance</h2>
+<p>I prefer <strong>fusion dance</strong>, such as <a href="http://solsort.com/contango">contact-tango</a>.<br />
+My roots come from argentine tango (since 2003),<br />
+and later many other dances, both solo and social.</p>
+<p>Get in touch, if you feel like a dance exchange,<br />
+especially if you have different dance roots than I,<br />
+as that often lead to interesting</p>
+<h2>Chronological notes and experiences:</h2>
+<ul>
+<li>2018-04-05 point of weightlessness, when walking heel first</li>
+<li>2018-03-28 exercise: clap-patterns for measure crowd musicality, standing &#8220;push-ups&#8221; for teaching connection.</li>
+<li>2018-03-22 deciding to log dance experiences to remember them</li>
+<li>2018-03-21 using momentum/jerk of leg/arm to extend movement of the body</li>
+<li>2018-03-19 mythological dance: connection between Ask Yggdrasil and the chakras</li>
+<li>2017-10-03 &#8220;light fibers&#8221; during dance</li>
+<li>2017-10-03 slowness as source of intensity</li>
+<li>2017-10-02 stopping and ask participants to reflect with each other during dance class</li>
+<li>&#8230;</li>
+</ul>
+<ul>
+<li>The dance trance, forget the border between oneself and the universe</li>
+<li>Use mythological figures and archetypes in the dance, like the indian Shiva(tandava), the eagle(shamanic), <span lang="zh">天(tai chi),</span> the norse and greek gods, warrior(african dance), etc.</li>
+<li>When not knowing what to do, breath and feel the connection between the foot and the floor</li>
+<li>You dance with the floor, the partner, the music, and much more</li>
+<li>Remember and join the intention of each of the trillions of cells of our body</li>
+</ul>
+<h2>Exercises</h2>
+<p>Tango</p>
+<ul>
+<li>Walking, one blind-folded, and one protecting against collisions.</li>
+<li>Standing &#8211; connection &#8211; just initiating movement from center to partners feet</li>
+<li>Just walking to music in the direction of the dance.</li>
+<li>The embrace: hug, and then release one arm. (show example of good/bad hugs, for laughs and rememberance)</li>
+<li>Dance with objective of minimising distance between oneself and the couple in front (good for teaching floorcraft).</li>
+<li>&#8220;Look ma&#8217;, no hands&#8221;: visual connection, chest connection</li>
+<li>Connection through various points: shoulders, head, stomach, fingers, &#8230;</li>
+<li>Musicality: same song (different versions / artist) through most the lesson, to get to know its structure well, and make it easier to play with</li>
+<li>Dancing individual instruments.</li>
+<li>Being slow and fast on the beat. Going against the beat. Walking individually and in couples.</li>
+<li>Make a dance of just walking. Make it interesting through music.</li>
+<li>Crossed/parallel system.</li>
+<li>Lead without walking, counter lead (from standing)</li>
+<li>Enumerate all possibilities of where to move.</li>
+<li>Mirror figure</li>
+<li>Reverse in middle of figure</li>
+<li>Front to back connection (show-dance-like, but can be good in social too)</li>
+<li>Follower closes eyes and connects with hand to leads center, to origin of movement.</li>
+<li>Blindfolded couple + one/two caretakers</li>
+<li>Changing roles, changing roles during dance, diffused roles</li>
+<li>Balloon dance</li>
+<li>Arms along stick/broom behind neck, &#8211; practice dissociation</li>
+<li>Leader impulse &#8211; follower intepretation &#8211; leader following the follower</li>
+<li>&#8230;</li>
+</ul>
+<p>General</p>
+<ul>
+<li>Warm-up: starting/dancing with feets moving upwards through all body parts</li>
+<li>Aikido/chi energy</li>
+<li>Different origins of movement in the body</li>
+<li>Off-balance</li>
+</ul>
+<hr />
+<p><img class="alignleft size-medium wp-image-250" src="https://veduz.rasmuserik.com/wp-content/uploads/2018/03/dance-300x210.jpg" alt="" width="300" height="210" srcset="https://rasmuserik.com/wp-content/uploads/sites/2/2018/03/dance-300x210.jpg 300w, https://rasmuserik.com/wp-content/uploads/sites/2/2018/03/dance.jpg 737w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+]]></content:encoded>
+			<wfw:commentRss>https://rasmuserik.com/2018-03-22-dance/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>statusrunde</title>
+		<link>https://rasmuserik.com/2018-03-15-statusrunde</link>
+		<pubDate>Thu, 15 Mar 2018 04:54:47 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=325</guid>
+		<description><![CDATA[Nyt regelmæssigt event i tinkuy torsdage 11:22: Statusrunde for selvstændige, iværksættere og andre ildsjæle. Alle, der har intention om at deltage regelmæssigt, er velkomne. Mødet starter 11:22, og består af to runder. I første runde giver alle en status, der svarer på tre punkter: Siden sidst. Hvad er der sket siden sidst, og hvad fylder &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-03-15-statusrunde" class="more-link">Continue reading<span class="screen-reader-text"> "statusrunde"</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p><strong>Nyt regelmæssigt event i tinkuy torsdage 11:22:</strong></p>
+<p>Statusrunde for selvstændige, iværksættere og andre ildsjæle.<span id="more-325"></span></p>
+<p>Alle, der har intention om at deltage regelmæssigt, er velkomne.<br />
+Mødet starter 11:22, og består af to runder.</p>
+<p>I første runde giver alle en status, der svarer på tre punkter:</p>
+<ol>
+<li>Siden sidst. Hvad er der sket siden sidst, og hvad fylder forøjeblikket?</li>
+<li>Planer. Hvad sker der inden næste gang? Og fokus/retning i det hele taget?</li>
+<li>Announcements og udfordringer. Er der noget du gerne vil dele, eller har brug for?</li>
+</ol>
+<p>I anden runde har deltagerne mulighed for at følge op på det, der blev sagt i første runde.<br />
+Typisk i form af: jeg har erfaring/nysgerrighed/&#8230; indenfor det og det, som du sagde dér, lad os snakke videre bagefter.</p>
+<p>Selv mødet har en klar struktur:</p>
+<ul>
+<li>hver deltager har 1 minut til at tale per runde, &#8211; derefter går turen videre.</li>
+<li>alt hvad der bliver sagt på mødet er fortroligt.</li>
+<li>mødet holdes stående</li>
+</ul>
+<p>Mødet kan bruges på forskellig vis:</p>
+<ul>
+<li>Koordinering og status &#8211; hvad sker der i Tinkuy og andre sammenhænge.</li>
+<li>Eventuelt overlap med fælles projekter.</li>
+<li>Man kan slynge spørgsmål ud til et bredere netværk, der måske kan give svar.</li>
+<li>Egen planlægning &#8211; hvis man sætter ord på planer overfor andre, virker det som internt pres.</li>
+<li>Erfaringsgruppe / netværk.</li>
+</ul>
+<p>Efter mødet, kan de som har tid og lyst, spise frokost sammen og snakke videre.<br />
+Det er også helt ok kun at deltage i runderne.</p>
+<p>Statusrunden er inspireret af daily stand-up i SCRUM, samt &#8220;runden&#8221; i en dansk udgave af Junto.</p>
+]]></content:encoded>
+			</item>
+		<item>
+		<title></title>
+		<link>https://rasmuserik.com/2018-03-15-1320</link>
+		<comments>https://rasmuserik.com/2018-03-15-1320#respond</comments>
+		<pubDate>Thu, 15 Mar 2018 05:20:08 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=1320</guid>
+		<description><![CDATA[Ikke længere aktuelt &#160; Nyt regelmæssigt event i tinkuy torsdage 11:22: Statusrunde for selvstændige, iværksættere og andre ildsjæle. Alle, der har intention om at deltage regelmæssigt, er velkomne. Mødet starter 11:22, og består af to runder. I første runde giver alle en status, der svarer på tre punkter: Siden sidst. Hvad er der sket siden &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-03-15-1320" class="more-link">Continue reading<span class="screen-reader-text"> ""</span></a></p>]]></description>
+				<content:encoded><![CDATA[<h1></h1>
+<h1><strong>Ikke længere aktuelt</strong></h1>
+<p>&nbsp;</p>
+<p><span style="text-decoration: line-through;"><strong>Nyt regelmæssigt event i tinkuy torsdage 11:22:</strong></span></p>
+<p>Statusrunde for selvstændige, iværksættere og andre ildsjæle.<span id="more-1320"></span></p>
+<p>Alle, der har intention om at deltage regelmæssigt, er velkomne.<br />
+Mødet starter 11:22, og består af to runder.</p>
+<p>I første runde giver alle en status, der svarer på tre punkter:</p>
+<ol>
+<li>Siden sidst. Hvad er der sket siden sidst, og hvad fylder forøjeblikket?</li>
+<li>Planer. Hvad sker der inden næste gang? Og fokus/retning i det hele taget?</li>
+<li>Announcements og udfordringer. Er der noget du gerne vil dele, eller har brug for?</li>
+</ol>
+<p>I anden runde har deltagerne mulighed for at følge op på det, der blev sagt i første runde.<br />
+Typisk i form af: jeg har erfaring/nysgerrighed/&#8230; indenfor det og det, som du sagde dér, lad os snakke videre bagefter.</p>
+<p>Selv mødet har en klar struktur:</p>
+<ul>
+<li>hver deltager har 1 minut til at tale per runde, &#8211; derefter går turen videre.</li>
+<li>alt hvad der bliver sagt på mødet er fortroligt.</li>
+<li>mødet holdes stående</li>
+</ul>
+<p>Mødet kan bruges på forskellig vis:</p>
+<ul>
+<li>Koordinering og status &#8211; hvad sker der i Tinkuy og andre sammenhænge.</li>
+<li>Eventuelt overlap med fælles projekter.</li>
+<li>Man kan slynge spørgsmål ud til et bredere netværk, der måske kan give svar.</li>
+<li>Egen planlægning &#8211; hvis man sætter ord på planer overfor andre, virker det som internt pres.</li>
+<li>Erfaringsgruppe / netværk.</li>
+</ul>
+<p>Efter mødet, kan de som har tid og lyst, spise frokost sammen og snakke videre.<br />
+Det er også helt ok kun at deltage i runderne.</p>
+<p>Statusrunden er inspireret af daily stand-up i SCRUM, samt &#8220;runden&#8221; i en dansk udgave af Junto.</p>
+]]></content:encoded>
+			<wfw:commentRss>https://rasmuserik.com/2018-03-15-1320/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>om dans</title>
+		<link>https://rasmuserik.com/2018-03-14-om-dans</link>
+		<pubDate>Wed, 14 Mar 2018 04:47:36 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=322</guid>
+		<description><![CDATA[Uddrag af brev: Dansen er et godt eksempel, og et selv-terapeutisk værktøj, til at gennemarbejde store følelser. Og gennem dansen, er det også muligt at forbinde til det der er udover. I går i bevægelserne i den frie dans, inddrager jeg de mytiske arketyper, gennemarbejder chakra, og endte i en tilstand af ubetinget kærlighed rettet &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-03-14-om-dans" class="more-link">Continue reading<span class="screen-reader-text"> "om dans"</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p><strong>Uddrag af brev:</strong><span id="more-322"></span></p>
+<blockquote><p>Dansen er et godt eksempel,<br />
+og et selv-terapeutisk værktøj,<br />
+til at gennemarbejde store følelser.<br />
+Og gennem dansen, er det også<br />
+muligt at forbinde<br />
+til det der er udover.</p>
+<p>I går i bevægelserne i den frie dans,<br />
+inddrager jeg de mytiske arketyper,<br />
+gennemarbejder chakra,<br />
+og endte i en tilstand af<br />
+ubetinget kærlighed<br />
+rettet mod universet,<br />
+og alle de andre dansere i rummet.</p>
+<p>Efter at have bevæget mig ind<br />
+og ud af en Sufi-lignende<br />
+trance-tilstand.</p>
+<p>Føler til tider glimtet af<br />
+at være nedsænket i gud,<br />
+&#8211; mystikerens vej &#8211;<br />
+og gang for gang,<br />
+lærer jeg af mit selv,<br />
+nye aspekter.<br />
+Et nyligt glimt var en slags<br />
+indtræden i Tian/天<br />
+som bliver tegnet<br />
+gennem det jeg tror<br />
+er de klassiske bevægelser<br />
+i Tai Chi (som jeg lærte<br />
+af en dansetræner,<br />
+for nogle år siden,<br />
+og inkooperere<br />
+i det frie bevægelser).</p>
+<p>Tangoen har<br />
+været transformativ<br />
+omend denne type dans<br />
+fungerer på anden vis.<br />
+Har brugt denne,<br />
+til at håndtere<br />
+dødssorg, såvel<br />
+som til at lære livet.</p>
+<p>Dette får mig til at tænke<br />
+på dansetilstande,<br />
+eller tilstande i livet<br />
+i det hele taget.<br />
+Jeg husker følelsen<br />
+efter en dans i Holland,<br />
+hvor den naturlige verden<br />
+var opløst af det magiske.</p>
+<p>Interessant hvorledes,<br />
+man føler og tænker.<br />
+Mine tanker er ofte<br />
+ikke i ord men i<br />
+fornemmelser,<br />
+nærmest fysiske følelser.<br />
+Har snakket med en del<br />
+mennesker om, hvorledes<br />
+de føler at de tænker,<br />
+og det er fascinerende<br />
+hvor forskellig hjerne virker.</p></blockquote>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>universet</title>
+		<link>https://rasmuserik.com/2018-03-13-universet</link>
+		<pubDate>Tue, 13 Mar 2018 04:39:02 +0000</pubDate>
+		<dc:creator><![CDATA[rasmuserik]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://rasmuserik.com/?p=320</guid>
+		<description><![CDATA[Om min forståelse af universet? Du og jeg, er dele af universet, så det er, at forstå os selv. Om min forståelse af universet? Kan mærke, at hvis jeg sætter ord på universet er det kærlighed. Ikke begær, ikke maya, men den ubetingede kærlighed. Om min forståelse af universet? Følelsen af en tidlig solopgang, og &#8230; <p class="link-more"><a href="https://rasmuserik.com/2018-03-13-universet" class="more-link">Continue reading<span class="screen-reader-text"> "universet"</span></a></p>]]></description>
+				<content:encoded><![CDATA[<p>Om min forståelse<br />
+af universet?<span id="more-320"></span></p>
+<p>Du og jeg,<br />
+er dele af<br />
+universet,<br />
+så det er,<br />
+at forstå<br />
+os selv.</p>
+<p>Om min forståelse<br />
+af universet?</p>
+<p>Kan mærke,<br />
+at hvis<br />
+jeg sætter<br />
+ord på<br />
+universet<br />
+er det<br />
+kærlighed.</p>
+<p>Ikke begær,<br />
+ikke maya,<br />
+men den<br />
+ubetingede<br />
+kærlighed.</p>
+<p>Om min forståelse<br />
+af universet?</p>
+<p>Følelsen af<br />
+en tidlig<br />
+solopgang,<br />
+og dugdråber<br />
+i edderkoppespind.<br />
+Og så ser man,<br />
+at det ikke er<br />
+solens reflektion<br />
+men det, der er<br />
+bag ved forhænget.</p>
+<p>Om min forståelse<br />
+af universet?</p>
+<p>Jeg er også<br />
+naturvidenskabsmand.<br />
+Det er poetisk,<br />
+og sandt at vi alle<br />
+er stjernestøv.<br />
+Tænk, at hvert et grundstof,<br />
+som du og jeg, og jorden<br />
+består af, er skabt<br />
+ved fusionsprocessen<br />
+i en nu udslukt stjerne,<br />
+for millioner af år siden.</p>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>
